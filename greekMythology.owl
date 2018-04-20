@@ -22,6 +22,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#condenado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#condenado">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#dislike -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#dislike">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#disliked"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#like"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#disliked -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#disliked">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasLowerBody -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasLowerBody"/>
@@ -31,6 +57,14 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasUpperBody -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasUpperBody"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#like -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#like">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -86,6 +120,21 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#MythologicalCreature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Condenado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Condenado">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#disliked"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
     </owl:Class>
     
 
