@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:untitled-ontology-8="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#condenado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#condenado">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#dislike -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#dislike">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#disliked"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#like"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#disliked -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#disliked">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasLowerBody -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasLowerBody"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasUpperBody -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasUpperBody"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#like -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#like">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#offspringOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#offspringOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#parentOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#parentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#parentOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Animal">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Centaur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Centaur">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasLowerBody"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Horse"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#hasUpperBody"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#MythologicalCreature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Damned -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Damned">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#disliked"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Demigod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Demigod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#offspringOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#offspringOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#MythologicalCreature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Greek -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Greek">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Olympian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Horse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Horse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#MythologicalCreature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#MythologicalCreature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Olympian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Olympian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Roman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Roman">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Olympian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Titan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Titan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Achilles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Achilles"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Alcmene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Alcmene"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Aphrodite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Aphrodite"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Apollo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Apollo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Ares -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Ares"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Artemis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Artemis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Athena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Athena"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Bacchus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Bacchus">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Dionysus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Chiron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Chiron"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Cronus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Cronus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Titan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Demeter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Demeter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Dionysus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Dionysus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hephaestus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hephaestus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hera"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Heracles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Heracles">
+        <offspringOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Alcmene"/>
+        <offspringOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hermes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hermes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Jupiter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Jupiter">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Peleus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Peleus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
+        <parentOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Achilles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Poseidon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Poseidon"/>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Thetis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Thetis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+        <parentOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Achilles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Olympian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Achilles"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Alcmene"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Alcmene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Cronus"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Alcmene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Heracles"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Alcmene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Chiron"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Heracles"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Cronus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Heracles"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Cronus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Heracles"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Jupiter"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Heracles"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
