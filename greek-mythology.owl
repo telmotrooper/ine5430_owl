@@ -115,6 +115,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#partOfGroup -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#partOfGroup">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#residesIn -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#residesIn">
@@ -131,6 +139,42 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Nereid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Nereid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#TheTwelveOlympians -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#TheTwelveOlympians">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#partOfGroup"/>
+                <owl:hasValue>The Twelve Olympians</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Olympian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#TheTwelveTitans -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#TheTwelveTitans">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#partOfGroup"/>
+                <owl:hasValue>The Twelve Titans</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Titan"/>
+    </owl:Class>
     
 
 
@@ -223,14 +267,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Greek -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Greek">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Olympian"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Horse -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Horse">
@@ -267,22 +303,22 @@
     
 
 
-    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Roman -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Roman">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Olympian"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Titan -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Titan">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#residesIn"/>
-                <owl:hasValue>Tartarus</owl:hasValue>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#residesIn"/>
+                        <owl:hasValue>Mount Othrys</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#residesIn"/>
+                        <owl:hasValue>Tartarus</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
     </owl:Class>
@@ -300,6 +336,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Coeus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Coeus">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Crius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Crius">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Hyperion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Hyperion">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Iapetus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Iapetus">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim">
@@ -308,10 +376,66 @@
     
 
 
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Mnemosyne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Mnemosyne">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Oceanus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Oceanus">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Phoebe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Phoebe">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Rhea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Rhea">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Telmo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Telmo">
         <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Tethys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Tethys">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Theia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Theia">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Themis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Themis">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
     </owl:NamedIndividual>
     
 
@@ -334,6 +458,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Aphrodite">
         <greek-mythology:likes rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim"/>
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -342,6 +467,7 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Apollo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Apollo">
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -351,6 +477,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Ares">
         <greek-mythology:dislikes rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim"/>
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -359,6 +486,7 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Artemis -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Artemis">
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -368,6 +496,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Athena">
         <greek-mythology:dislikes rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim"/>
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -393,6 +522,7 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Cronus -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Cronus">
+        <greek-mythology:partOfGroup>The Twelve Titans</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Tartarus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -402,6 +532,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Demeter">
         <greek-mythology:likes rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim"/>
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -410,6 +541,7 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Dionysus -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Dionysus">
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -418,6 +550,7 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hephaestus -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hephaestus">
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -426,6 +559,7 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hera -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hera">
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -445,6 +579,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hermes">
         <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Olympian"/>
         <greek-mythology:likes rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim"/>
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -453,7 +588,6 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Jupiter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Jupiter">
-        <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Roman"/>
         <owl:sameAs rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
     </owl:NamedIndividual>
     
@@ -471,6 +605,7 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Poseidon -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Poseidon">
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
@@ -479,7 +614,7 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Thetis -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Thetis">
-        <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Nereid"/>
         <parentOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Achilles"/>
     </owl:NamedIndividual>
     
@@ -490,6 +625,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus">
         <greek-mythology:dislikes rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim"/>
         <greek-mythology:marriedTo rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hera"/>
+        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
         <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
     </owl:NamedIndividual>
     
