@@ -27,7 +27,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikedBy">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikes"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
     </owl:ObjectProperty>
     
 
@@ -590,14 +589,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Jupiter -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Jupiter">
-        <owl:sameAs rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Peleus -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Peleus">
@@ -676,7 +667,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hera"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Heracles"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hermes"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Jupiter"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Peleus"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Poseidon"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Thetis"/>
