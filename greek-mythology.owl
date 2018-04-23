@@ -140,6 +140,23 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#ofGender">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>female</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>male</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -173,7 +190,30 @@
 
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Being -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Being"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Being">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#ofGender"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>female</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>male</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
@@ -450,16 +490,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#TEST -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#TEST">
+        <ofGender>male</ofGender>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Telmo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Telmo">
         <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
-        <greek-mythology:dislikedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Artemis"/>
-        <greek-mythology:dislikedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Poseidon"/>
-        <greek-mythology:dislikedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
-        <greek-mythology:likedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Hyperion"/>
-        <greek-mythology:likedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Oceanus"/>
-        <greek-mythology:likedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Cronus"/>
+        <dislikedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Artemis"/>
+        <dislikedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Poseidon"/>
+        <dislikedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
+        <likedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Hyperion"/>
+        <likedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Oceanus"/>
+        <likedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Cronus"/>
     </owl:NamedIndividual>
     
 
@@ -664,11 +712,11 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus">
-        <greek-mythology:dislikes rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim"/>
-        <greek-mythology:marriedTo rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hera"/>
-        <greek-mythology:ofGender>male</greek-mythology:ofGender>
-        <greek-mythology:partOfGroup>The Twelve Olympians</greek-mythology:partOfGroup>
-        <greek-mythology:residesIn>Mount Olympus</greek-mythology:residesIn>
+        <dislikes rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#Joaquim"/>
+        <marriedTo rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Hera"/>
+        <ofGender>male</ofGender>
+        <partOfGroup>The Twelve Olympians</partOfGroup>
+        <residesIn>Mount Olympus</residesIn>
     </owl:NamedIndividual>
     
 
