@@ -40,6 +40,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikedBecauseFriendBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikedBecauseFriendBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikesBecauseFriend"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikedBy">
@@ -50,9 +58,7 @@
 
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikes -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikes">
-        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikesBecauseFriend"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikes"/>
     
 
 
@@ -326,11 +332,20 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Damned">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikedBy"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikedBecauseFriendBy"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikedBy"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
     </owl:Class>
@@ -659,6 +674,7 @@
     <!-- http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Dionysus -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Dionysus">
+        <friendOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
         <ofGender>male</ofGender>
         <partOfGroup>The Twelve Olympians</partOfGroup>
         <residesIn>Mount Olympus</residesIn>
