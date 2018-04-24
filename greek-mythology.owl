@@ -238,7 +238,7 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#likedBy"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -341,7 +341,7 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/greek-mythology#dislikedBy"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#God"/>
                     </owl:Restriction>
                 </owl:unionOf>
@@ -727,6 +727,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Peleus">
         <rdf:type rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Human"/>
+        <dislikedBy rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Zeus"/>
         <untitled-ontology-8:parentOf rdf:resource="http://www.semanticweb.org/telmo/ontologies/2018/3/untitled-ontology-8#Achilles"/>
         <ofGender>male</ofGender>
     </owl:NamedIndividual>
